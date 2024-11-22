@@ -1,0 +1,21 @@
+
+<Algorithm HW#3>
+
+2014-17831 김재원 (JaeWon Kim)
+
+1. Basic logic of the program:
+    The logic of this algorithm is essentially identical to the LCS Problem except that
+    - the two given strings are reverse of each other and that
+    - the condition for determining 'common' sequence is determined via the
+    - `isComplementPair` method that returns `True` for complementary characters.
+
+2. Execution related details:
+    - How to Run: `python LRCS.py`
+    - How to Modify the Input: add or modify the `files` list in the first line of this scope.
+    - Where to Find the Output: `{input file name}-output.txt` for each file in the current directory.
+
+    I tried to support the execution of multiple input test case files.
+    Most details of the program are included in the program, as I assumed it would be easier to interpret than a separate report.
+    I tried my best to make the program self-explanatory, so please refer to `LRCS.py` if there are any necessary details missing in this report.
+
+    Thank you :)

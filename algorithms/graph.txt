@@ -1,0 +1,33 @@
+    def __str__(self):
+        """ Print a tree an level-order representation. """
+        strlist = []
+        thislevel = [self.root]
+        while thislevel:
+            nextlevel = []
+            output = ""
+            for node in thislevel:
+                if not node.leaf:
+                    nextlevel.extend(node.child)
+                output += str(node) + " "
+            strlist.append(output)
+            thislevel = nextlevel
+        # get length of the biggest level of tree
+        length = len(strlist[-1])
+        # move levels to the center of string
+        lst = [s.center(length) for s in strlist]
+        return "\n".join(lst)
+
+
+B = BTree(2)
+
+KEYS = ['F', 'S', 'Q', 'K', 'C', 'L', 'H', 'T', 'V', 'W', 'M',
+        'R', 'N', 'P', 'A', 'B', 'X', 'Y', 'D', 'Z', 'E']
+
+for i in range(len(KEYS)):
+    B.insert((i, KEYS[i]))
+    print(B)
+    print()
+
+B.delete(B.root, (8,))
+print("\n")
+print(B)
